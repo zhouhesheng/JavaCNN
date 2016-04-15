@@ -485,6 +485,7 @@ public class Util {
 	 * 测试卷积,测试结果：4核下并发并行的卷积提高不到2倍
 	 */
 	private static void testConvn() {
+		System.out.println("testConvn-----init m and k");
 		int count = 1;
 		double[][] m = new double[5][5];
 		for (int i = 0; i < m.length; i++)
@@ -495,14 +496,21 @@ public class Util {
 			for (int j = 0; j < k[0].length; j++)
 				k[i][j] = 1;
 		double[][] out;
-		// out= convnValid(m, k);
+		
 		Util.printMatrix(m);
-		out = convnFull(m, k);
+		Util.printMatrix(k);
+		
+		out= convnValid(m, k);
+		System.out.println("testConvn valid----out");
 		Util.printMatrix(out);
-		// System.out.println();
-		// out = convnFull(m, Util.rot180(k));
-		// Util.printMatrix(out);
 
+		out = convnFull(m, k);
+		System.out.println("testConvn full----out");
+		Util.printMatrix(out);
+		
+		System.out.println("testConvn fullrot180----");
+		out = convnFull(m, Util.rot180(k));
+		Util.printMatrix(out);
 	}
 
 	private static void testScaleMatrix() {
@@ -588,25 +596,7 @@ public class Util {
 		printMatrix(matrix);
 	}
 
-	public static void main(String[] args) {
-		 new TimedTest(new TestTask() {
-		
-		 @Override
-		 public void process() {
-		 testConvn();
-		  testScaleMatrix();
-		  testKronecker();
-		  testMatrixProduct();
-		  testCloneMatrix();
-		 }
-		 }, 1).test();
-		 ConcurenceRunner.stop();
-		System.out.println(sigmod(0.727855957917715));
-		Double a = 1.0;
-		int b = 1;
-		System.out.println(a.equals(b));
-	}
-
+	
 	/**
 	 * 取最大的元素的下标
 	 * 
@@ -630,6 +620,26 @@ public class Util {
 			sb.append(String.format("%4f,", each));
 		sb.append("]");
 		return sb.toString();
+	}
+
+	
+	public static void main(String[] args) {
+		 new TimedTest(new TestTask() {
+		
+		 @Override
+		 public void process() {
+		 testConvn();
+		  testScaleMatrix();
+		  testKronecker();
+		  testMatrixProduct();
+		  testCloneMatrix();
+		 }
+		 }, 1).test();
+		 ConcurenceRunner.stop();
+		System.out.println(" sigmod= "+sigmod(0.727855957917715));
+		Double a = 1.0;
+		int b = 1;
+		System.out.println(a.equals(b));
 	}
 
 }

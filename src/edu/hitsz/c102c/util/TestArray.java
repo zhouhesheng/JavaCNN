@@ -38,8 +38,8 @@ public class TestArray {
 		String a = "aAdfa彭_";
 		System.out.println(a.toUpperCase(Locale.CHINA));
 		double[][] d = new double[3][];
-//		d[0] = new double[] { 1,2,3 };
-//		d[1] = new double[] { 3,4,5,6 };
+		d[0] = new double[] { 1,2,3 };
+		d[1] = new double[] { 3,4,5,6 };
 		System.out.println(d[1][3]);
 		final TestArray t = new TestArray(10000, 1000);
 		new TimedTest(new TestTask() {
