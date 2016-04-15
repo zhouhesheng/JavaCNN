@@ -589,18 +589,18 @@ public class Util {
 	}
 
 	public static void main(String[] args) {
-		// new TimedTest(new TestTask() {
-		//
-		// @Override
-		// public void process() {
-		// testConvn();
-		// // testScaleMatrix();
-		// // testKronecker();
-		// // testMatrixProduct();
-		// // testCloneMatrix();
-		// }
-		// }, 1).test();
-		// ConcurenceRunner.stop();
+		 new TimedTest(new TestTask() {
+		
+		 @Override
+		 public void process() {
+		 testConvn();
+		  testScaleMatrix();
+		  testKronecker();
+		  testMatrixProduct();
+		  testCloneMatrix();
+		 }
+		 }, 1).test();
+		 ConcurenceRunner.stop();
 		System.out.println(sigmod(0.727855957917715));
 		Double a = 1.0;
 		int b = 1;
