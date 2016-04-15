@@ -1,11 +1,11 @@
 package edu.hitsz.c102c.util;
 
 /**
- * ¼ÆÊ±µÄ²âÊÔ¹¤¾ß
+ * è®¡æ—¶çš„æµ‹è¯•å·¥å…·
  * 
  * @author jiqunpeng
  * 
- *         ´´½¨Ê±¼ä£º2014-7-8 ÏÂÎç8:21:56
+ *         åˆ›å»ºæ—¶é—´ï¼š2014-7-8 ä¸‹åˆ8:21:56
  */
 public class TimedTest {
 	private int repeat;

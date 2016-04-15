@@ -5,11 +5,11 @@ import java.util.Locale;
 import edu.hitsz.c102c.util.TimedTest.TestTask;
 
 /**
- * ²âÊÔÔªËØÖ±½Ó·ÃÎÊÊı×éÓëÍ¨¹ıº¯Êı·ÃÎÊÊı×éµÄĞ§ÂÊ£¬ ½áÂÛ£ºº¯ÊıĞÎÊ½·ÃÎÊ²¢Ã»ÓĞ½µµÍËÙ¶È
+ * æµ‹è¯•å…ƒç´ ç›´æ¥è®¿é—®æ•°ç»„ä¸é€šè¿‡å‡½æ•°è®¿é—®æ•°ç»„çš„æ•ˆç‡ï¼Œ ç»“è®ºï¼šå‡½æ•°å½¢å¼è®¿é—®å¹¶æ²¡æœ‰é™ä½é€Ÿåº¦
  * 
  * @author jiqunpeng
  * 
- *         ´´½¨Ê±¼ä£º2014-7-9 ÏÂÎç3:18:30
+ *         åˆ›å»ºæ—¶é—´ï¼š2014-7-9 ä¸‹åˆ3:18:30
  */
 public class TestArray {
 	double[][] data;
@@ -35,7 +35,7 @@ public class TestArray {
 	}
 
 	public static void main(String[] args) {
-		String a = "aAdfaÅí_";
+		String a = "aAdfaå½­_";
 		System.out.println(a.toUpperCase(Locale.CHINA));
 		double[][] d = new double[3][];
 //		d[0] = new double[] { 1,2,3 };
